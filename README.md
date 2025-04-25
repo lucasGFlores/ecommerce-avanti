@@ -8,7 +8,6 @@
 
 - Uso de elementos responsivos (Desktop e mobile)
 
----
 ## 🧰 Requisitos
 - Navegador moderno
 
