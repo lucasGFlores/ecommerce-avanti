@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto 1</title>
+  <!-- Imports do swiper -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- importação de arquivos -->
+  <link rel="stylesheet" href="styles/swiper.css">
+  <link rel="stylesheet" href="styles/style.css">
+
+  <!-- Libs externas -->
+  <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css" />
+
+  <!-- Tailwind  -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<!-- Swiper JS -->
+<script src="scripts/swiper.js" defer></script>
+<script src="scripts/search.js" defer></script>
+
+
+<body>
+
+  <header class="sticky top-0  bg-white shadow z-50">
+
+    <div class="text-center bg-[#0070f3] text-white text-[12px] py-1 ">Ganhe <spam class="bg-[#6220C1] px-2 py-[1px]">
+        R$10,00</spam> de desconto no seu primeiro pedido. Use o cupom
+      <spam class="font-extralight">DESCONTO10</spam>
+    </div>
+    <div class="flex flex-col items-center mt-5">
+      <div class="flex justify-between md:justify-center w-full px-5">
+        <img src="images/barras.png" class="md:aspect-w-16 md:aspect-h-9 md:hidden" />
+        <img src="images/LOGO.png" class="w-32 object-contain md:mr-16" />
+        <div class="relative w-[40%] hidden md:block md:mr-32">
+          <input type="text" id="search-input"
+            class="w-full  rounded-md border-2  h-10 px-2 focus:outline-none focus:ring-2 focus:ring-blue-500  "
+            placeholder="Digite aqui o que você procura" />
+          <button id="search-button" class=" 
+          absolute right-0 top-5 h-10 w-10 transform -translate-y-1/2  z-10
+          ">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+
+          </button>
+        </div>
+
+        <div class=" hidden md:flex md:flex-row items-center gap-2 mr-16">
+          <img src="images/pessoa.png" class=" h-8 aspect-square" />
+          <h3>Olá,<br>Nome cliente!</h3>
+        </div>
+        <img src="images/carrinho.png" class="w-10 object-contain
+" />
+      </div>
+
+      <div class="relative w-[90%] mt-5 md:hidden ">
+        <input type="text"
+          class="w-full  rounded-md border-2  h-10 px-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          placeholder="Digite aqui o que você procura" />
+        <img src="images/lupa.png" alt="Buscar"
+          class="absolute right-3 top-1/2 h-5 w-5 transform -translate-y-1/2 pointer-events-none" />
+      </div>
+
+    </div>
+
+
+    <!-- Departamentos -->
+    <nav class="invisible h-10 justify-center md:visible md:min-h-10 flex items-center space-x-6 relative">
+      <div class="group">
+        <span class="cursor-pointer hover:font-semibold hover:text-[#005CFF]">☰ Todas as Categorias</span>
+        <div class="absolute  left-20 top-7 h-4 w-full"></div>
+        <!-- Dropdown -->
+        <div class="absolute left-1/2 transform -translate-x-1/2 top-10 mt-1 hidden 
+                        bg-white shadow-lg rounded-md z-50 min-w-[80vw] min-h-[270px] max-h-[300px]
+
+                        group-hover:block 
+                         origin-top
+                         transform opacity-0 scale-95 
+                         group-hover:opacity-100 group-hover:scale-100
+                         transition-opacity transform-transform duration-200 group-hover:duration-200
+                         ease-in
+                         group-hover:ease-in-out
+                         ">
+
+          <div class="flex overflow-hidden">
+            <div class="bg-[#F5F5F5] h-full p-4 rounded-md flex flex-col overflow-y-scroll  max-h-[300px] gap-4">
+              <div class="
+                    flex flex-row justify-between items-center
+                    hover:text-[#005CFF] 
+                    ">
+                <h1>Departamento</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" class="
+                        h-4 w-4
+                      " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </div>
+              <div class="
+                                flex flex-row justify-between items-center
+                                hover:text-[#005CFF] 
+                                ">
+                <h1>Departamento</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" class="
+                                    h-4 w-4
+                                  " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </div>
+              <div class="
+                                flex flex-row justify-between items-center
+                                hover:text-[#005CFF] 
+                                ">
+                <h1>Departamento</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" class="
+                                    h-4 w-4
+                                  " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </div>
+              <div class="
+                                flex flex-row justify-between items-center
+                                hover:text-[#005CFF] 
+                                ">
+                <h1>Departamento</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" class="
+                                    h-4 w-4
+                                  " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </div>
+              <div class="
+                                flex flex-row justify-between items-center
+                                hover:text-[#005CFF] 
+                                ">
+                <h1>Departamento</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" class="
+                                    h-4 w-4
+                                  " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </div>
+              <div class="
+                                flex flex-row justify-between items-center
+                                hover:text-[#005CFF] 
+                                ">
+                <h1>Departamento</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" class="
+                                    h-4 w-4
+                                  " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </div>
+              <div class="
+                                flex flex-row justify-between items-center
+                                hover:text-[#005CFF] 
+                                ">
+                <h1>Departamento</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" class="
+                                    h-4 w-4
+                                  " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </div>
+              <div class="
+                                flex flex-row justify-between items-center
+                                hover:text-[#005CFF] 
+                                ">
+                <h1>Departamento</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" class="
+                                    h-4 w-4
+                                  " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </div>
+              <div class="
+                                flex flex-row justify-between items-center
+                                hover:text-[#005CFF] 
+                                ">
+                <h1>Departamento</h1>
+                <svg xmlns="http://www.w3.org/2000/svg" class="
+                                    h-4 w-4
+                                  " fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                  class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+              </div>
+
+            </div>
+
+
+            <div class=" 
+                  w-[40%] max-h-[300px] py-5
+                  flex flex-row justify-around 
+                  ">
+              <div class="flex flex-col  gap-3">
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+
+              </div>
+              <div class="flex flex-col  gap-3">
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+
+              </div>
+              <div class="flex flex-col  gap-3">
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+
+              </div>
+            </div>
+
+            <div class="
+                    flex-1 max-h-[300px] flex justify-end items-center
+                  ">
+              <img src="images/confira.png" class="h-[90%] mr-5" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="group">
+        <div class="flex items-center space-x-8">
+          <span class="cursor-pointer hover:font-semibold hover:text-[#005CFF]">Departamento</span>
+          <span class="cursor-pointer hover:font-semibold hover:text-[#005CFF]">Departamento</span>
+          <span class="cursor-pointer hover:font-semibold hover:text-[#005CFF]">Departamento</span>
+          <span class="cursor-pointer hover:font-semibold hover:text-[#005CFF]">Departamento</span>
+          <span class="cursor-pointer hover:font-semibold hover:text-[#005CFF]">Departamento</span>
+          <span class="cursor-pointer hover:font-semibold hover:text-[#005CFF]">Departamento</span>
+          <span class="cursor-pointer hover:font-semibold hover:text-[#005CFF]">Departamento</span>
+          <span class="cursor-pointer hover:font-semibold hover:text-[#005CFF]">Departamento</span>
+        </div>
+        <div class="absolute left-[25%] top-7  h-4 w-full"></div>
+        <!-- Dropdown Departamentos -->
+        <div
+          class="absolute left-1/2 transform -translate-x-1/2 top-10 mt-1 hidden group-hover:block
+                                bg-white shadow-lg rounded-md z-50 min-w-[80vw] min-h-[270px] max-h-[300px]
+                                transition-all duration-500 transform opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100">
+
+          <div class="
+         flex flex-row p-4
+         ">
+            <div class="flex flex-col justify-start">
+              <h1 class="text-lg font-bold">Departamento</h1>
+              <div class="flex flex-row mt-3 gap-32">
+                <div class="flex flex-col  gap-3">
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                </div>
+                <div class="flex flex-col  gap-3">
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+
+                </div>
+                <div class="flex flex-col  gap-3">
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+                  <h2 class="text-gray-600 hover:text-[#005CFF] hover:font-semibold">Categoria</h2>
+
+                </div>
+              </div>
+            </div>
+            <div class="
+                 flex-1 flex justify-end items-center max-h-[270px]">
+              <img src="images/confira.png" class="h-full" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+  </header>
+
+  <!-- Banner de anúncio -->
+  <section class="relative  h-[290px] md:h-[500px]">
+    <img src="images/anuncio.png" class="object-cover absolute invisible md:visible" />
+    <img src="images/banner_celular.png" class="object-cover absolute  visible md:invisible" />
+
+  </section>
+
+
+  <!--  carrossel -->
+  <section class="produtos">
+    <div class="produtos-header">
+      <h3 class="text-xl"><strong>Lançamentos</strong></h3>
+      <a href="#" class="text-md font-semibold">Ver mais</a>
+    </div>
+
+    <!-- Carrossel de itens -->
+    <div class="swiper overflow-visible hide-scrollbars">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="invisible md:visible swiper-button-next"></div>
+      <div class="invisible md:visible swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- Foto da caneca em fundo cinza -->
+  <div class="flex  flex-col items-center justify-center  md:flex-row md:px-[10%]  md:m-20">
+    <img class="" src="images/caneca.png" />
+    <div class="m-5 md:ml-20">
+      <h1 class="font-bold text-[2.2em] ">Lorem Ipsum</h1>
+      <h3 class="mt-5 wrap text-sm md:text-lg">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus
+        dui.
+        Mauris
+        laoreet
+        lacus ut eleifend viverra.
+        Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar
+        ligula
+        hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor
+        fringilla
+        magna
+        consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue</h3>
+
+      <h3 class="mt-5 wrap text-sm md:text-lg">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus
+        dui.
+        Mauris
+        laoreet
+        lacus ut eleifend
+        viverra.
+        Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar
+        ligula
+        hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor
+        fringilla
+        magna
+        consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</h3>
+    </div>
+
+  </div>
+
+  <!--  Caneca com Pins-->
+  <section class="flex flex-col gap-[15px] md:flex-row-reverse justify-center bg-[#DEDEDE] w-full py-10 mt-5">
+    <img class="p-5" src="images/caneca_tabua.png">
+    <div class="flex flex-col justify-center items-center px-5 md:w-1/3 md:mr-10">
+      <h1 class="font-bold text-[1.8em] mb-[0.8em] text-gray-700">LOREM IPSUM</h1>
+
+      <div class=" flex items-center justify-center mb-10">
+        <img class="w-[50%] md:w-[15%] mr-5" src="images/map.png">
+        <p class="text-sm md:text-lg text-left text-gray-600">Aenean massa. Cum sociis natoque penatibus et magnis dis
+          parturient
+          montes,
+          nascetur
+          ridiculus
+          mus. Donec quam felis,
+          ultricies nec, pellentesque eu, pretium quis, sem.</p>
+      </div>
+      <div class=" flex items-center justify-center mb-10">
+        <img class="w-[50%] md:w-[15%] mr-5" src="images/map.png">
+        <p class="text-sm md:text-lg text-left text-gray-600">Aenean massa. Cum sociis natoque penatibus et magnis dis
+          parturient
+          montes,
+          nascetur
+          ridiculus
+          mus. Donec quam felis,
+          ultricies nec, pellentesque eu, pretium quis, sem.</p>
+      </div>
+      <div class=" flex items-center justify-center mb-10">
+        <img class="w-[50%] md:w-[15%] mr-5" src="images/map.png">
+        <p class="text-sm md:text-lg text-left text-gray-600">Aenean massa. Cum sociis natoque penatibus et magnis dis
+          parturient
+          montes,
+          nascetur
+          ridiculus
+          mus. Donec quam felis,
+          ultricies nec, pellentesque eu, pretium quis, sem.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Foto da caneca em fundo cinza -->
+  <div class="flex  flex-col items-center justify-center  md:flex-row md:px-[10%] mt-10  md:m-10">
+    <img class="" src="images/caneca.png" />
+    <div class="m-5 md:ml-20">
+      <h1 class="font-bold text-[2.2em] ">Lorem Ipsum</h1>
+      <h3 class="mt-5 wrap text-sm md:text-lg">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus
+        dui.
+        Mauris
+        laoreet
+        lacus ut eleifend viverra.
+        Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar
+        ligula
+        hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor
+        fringilla
+        magna
+        consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue</h3>
+
+      <h3 class="mt-5 wrap text-sm md:text-lg">Duis consectetur metus nec lacus auctor dignissim. Mauris vitae finibus
+        dui.
+        Mauris
+        laoreet
+        lacus ut eleifend
+        viverra.
+        Cras efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed lacinia pharetra magna, vel pulvinar
+        ligula
+        hendrerit a. Maecenas fringilla porttitor tortor eget lacinia. Donec sollicitudin euismod orci, auctor
+        fringilla
+        magna
+        consequat interdum. Fusce sagittis elit a libero commodo egestas efficitur id augue.</h3>
+    </div>
+
+  </div>
+  <!-- Titulos do carrossel -->
+  <section class="produtos">
+    <div class="produtos-header">
+      <h3 class="text-xl"><strong>Lançamentos</strong></h3>
+      <a href="#" class="text-md font-semibold">Ver mais</a>
+    </div>
+
+    <!-- Carrossel de itens -->
+    <div class="swiper overflow-visible hide-scrollbars">
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="card ">
+            <img src="images/cara_com_camisa.png" alt="Produto 1" />
+            <h3 class="text-[0.8em] md:text-[1em] text-gray-500  "> Lorem ipsum dolor sit amet consectetuer
+              adipiscing
+              elit
+            </h3>
+            <section class=" flex items-center md:px-5">
+              <section class="flex flex-col">
+                <p class="text-sm md:text-lg price-discount text-left line-through text-gray-500">R$100,00</p>
+                <p class="price text-md md:text-[1.75em] text-left font-bold ">R$79,90</p>
+              </section>
+              <section
+                class="ml-2 bg-[#5EC0BE] text-white rounded-md text-[0.57em]  md:text-[1em] font-semibold underline py-1 px-1">
+                10% OFF
+              </section>
+            </section>
+            <p class="parceling text-[0.62em] md:px-5 md:text-[0.75em] text-left">Ou em até <strong>10x de R$
+                7,90</strong></p>
+            <button
+              class="py-2 md:py-3 bg-[#005CFF] w-full mt-3 rounded-md  text-sm  text-white font-bold  hover:bg-[#0047CC]">Comprar</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation buttons -->
+      <div class="invisible md:visible swiper-button-next"></div>
+      <div class="invisible md:visible swiper-button-prev"></div>
+    </div>
+  </section>
+
+  <!-- Banner insentivando entrar em contato  -->
+  <section class="relative">
+    <!-- Preciso mudar a altura por causa respocividade  -->
+    <img class="w-full h-[660px]" src="images/fundo_avanti.png" />
+    <div class="absolute inset-0 flex items-center justify-center">
+      <div class="bg-[#005CFF] text-center p-4 md:p-4 w-full">
+        <p class="text-white text-xl">Entre em contato conosco e verifique a disponibilidade para sua região!</p>
+      </div>
+    </div>
+  </section>
+  <!-- Incrição na newsletter -->
+  <section class="flex flex-col items-center w-full mt-10">
+    <h1 class="font-bold text-md md:text-xl">Cadastre-se na nossa <spam class="text-[#005CFF]">newsletter</spam>
+    </h1>
+    <div
+      class="w-[95%] md:w-[70%] bg-[#DEDEDE] rounded-md p-8 m-5 flex gap-[20px] flex-col md:flex-row justify-evenly items-center">
+      <div class="bg-[#FFFFFF] px-5 py-3 rounded-md w-full md:w-1/4">
+        Digite seu nome
+      </div>
+      <div class="bg-[#FFFFFF] px-5 py-3 rounded-md w-full md:w-1/4">
+        Digite seu e-mail
+      </div>
+      <div class="flex gap-[10px]">
+        <input type="checkbox"></input>
+        <p class="text-sm text-gray-600">Eu concordo com as <spam class="underline">políticas de privacidade</spam>
+        </p>
+      </div>
+
+      <button class="w-full md:w-1/6 px-10 py-2 md:py-3 bg-[#005CFF] rounded-md font-semibold text-lg text-white">
+        Cadastrar
+      </button>
+    </div>
+  </section>
+
+  <!-- informações extras -->
+  <section class="
+     w-full mt-10  py-[3%] h-full bg-[#F5F5F5] 
+     flex flex-col  items-center 
+     md:flex-row md:items-start md:justify-center">
+    <div class="
+    mt-10 w-full mb-10 md:mb-0 md:w-1/5
+    flex flex-col  gap-[2.5em] md:gap-[8%] 
+    md:flex-row md:items-start md:justify-center md:mr-16">
+      <!-- Contatos -->
+      <div class="
+      flex flex-col items-center
+       md:items-start md:w-[60%]">
+        <!-- Logo avanti -->
+        <!-- <img/> -->
+        <img src="icons/empresas/Avanti.svg" class="w-32 mb-5" alt="Logo Avanti" />
+        <div class=" 
+        w-full mt-8
+        flex flex-row gap-[40px] justify-center
+        md:justify-between">
+          <!-- Icones -->
+          <img src="icons/redes sociais/instagram.svg">
+          <img src="icons/redes sociais/facebook.svg">
+          <img src="icons/redes sociais/youtube-logo.svg">
+          <img src="icons/redes sociais/logo-tiktok-svgrepo-com.svg">
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Redirecionamento para outras informações -->
+    <div class="
+       w-full 
+       relative overflow-hidden
+       border-solid border-2 border-[#E5E7EB]
+       md:w-[15%] md:border-none
+       ">
+      <input type="checkbox" class="
+          peer
+          absolute top-0 left-0 opacity-0 z-10
+          w-full h-12 
+          cursor-pointer 
+          md:invisible
+        ">
+      <div class="
+        bg-[#F5F5F5]
+        h-12 w-full
+        px-8
+        flex items-center 
+        ">
+        <h1 class="
+        text-lg font-semibold text-black 
+        md:text-base
+        "> Institucional</h1>
+      </div>
+      <!-- Icone da seta -->
+
+      <div class="
+          absolute top-3 right-3
+          text-white
+          transition-transform duration-500 ease-in-out
+          rotate-0 peer-checked:rotate-180
+        ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="
+          size-6 text-[#0a3d62]
+          md:invisible
+          ">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+      </div>
+      <!-- Conteudo -->
+      <div class="
+          bg-[#F5F5F5] 
+          overflow-hidden
+          transition-all duration-300 ease-in-out
+          max-h-0 py-0  peer-checked:max-h-[300px] peer-checked:py-2
+          md:max-h-[300px]
+          
+        ">
+        <ul class="flex flex-col space-y-2 px-8 mt-2">
+          <li class="
+           text-sm text-gray-600
+           md:text-[0.85em]
+           ">
+            Sobre Nós</li>
+          <li class="
+                     text-sm text-gray-600
+                     md:text-[0.85em]
+                     ">
+            Nossas Lojas</li>
+          <li class="
+                     text-sm text-gray-600
+                     md:text-[0.85em]
+                     ">Privacidade e Segurança</li>
+          <li class="
+                     text-sm text-gray-600
+                     md:text-[0.85em]
+                     ">Termos e Condições</li>
+      </div>
+    </div>
+    <div class="
+           w-full
+           relative overflow-hidden
+           md:w-[15%]
+           ">
+      <input type="checkbox" class="
+              peer
+              absolute top-0 left-0 opacity-0 z-10
+              w-full h-12 
+              cursor-pointer 
+              md:invisible
+            ">
+      <div class="
+            bg-[#F5F5F5]
+            h-12 w-full
+            px-8
+            flex items-center 
+            ">
+        <h1 class="text-lg font-semibold text-black md:text-base "> Central de ajuda</h1>
+      </div>
+      <!-- Icone da seta -->
+
+      <div class="
+              absolute top-3 right-3
+              text-white
+              transition-transform duration-500 ease-in-out
+              rotate-0 peer-checked:rotate-180
+              md:invisible
+            ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6 text-[#0a3d62]">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+      </div>
+      <!-- Conteudo -->
+      <div class="
+              bg-[#F5F5F5] 
+              overflow-hidden
+              transition-all duration-300 ease-in-out
+              max-h-0 py-0  peer-checked:max-h-[300px] peer-checked:py-2
+              md:max-h-[300px]
+            ">
+        <ul class="flex flex-col space-y-2 px-8 mt-2">
+          <li class="
+                     text-sm text-gray-600
+                     md:text-[0.85em]
+                     ">
+            Fale Conosco</li>
+          <li class="
+                     text-sm text-gray-600
+                     md:text-[0.85em]
+                     ">
+            Frete e Entrega</li>
+          <li class="
+                     text-sm text-gray-600
+                     md:text-[0.85em]
+                     ">Trocas e Devoluções</li>
+          <li class="
+                     text-sm text-gray-600
+                     md:text-[0.85em]
+                     ">Formas de Pagamento</li>
+          <li class="
+                     text-sm text-gray-600
+                     md:text-[0.85em]
+                     ">FAQ</li>
+      </div>
+    </div>
+    <div class="
+           w-full
+           relative overflow-hidden
+           border-solid border-2 border-[#E5E7EB]
+           md:w-[18%] md:border-none
+
+           ">
+      <input type="checkbox" class="
+              peer
+              absolute top-0 left-0 opacity-0 z-10
+              w-full h-12 
+              cursor-pointer 
+              md:invisible
+            ">
+      <div class="
+            bg-[#F5F5F5]
+            h-12 w-full
+            px-8
+            flex items-center 
+            ">
+        <h1 class="text-lg font-semibold text-black md:text-base"> Atendimento</h1>
+      </div>
+      <!-- Icone da seta -->
+
+      <div class="
+              absolute top-3 right-3
+              text-white
+              transition-transform duration-500 ease-in-out
+              rotate-0 peer-checked:rotate-180
+              md:invisible
+            ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6 text-[#0a3d62]">
+          <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+        </svg>
+      </div>
+      <!-- Conteudo -->
+      <div class="
+              bg-[#F5F5F5] 
+              overflow-hidden
+              transition-all duration-300 ease-in-out
+              max-h-0 py-0  peer-checked:max-h-[300px] peer-checked:py-2
+              md:max-h-[300px]
+            ">
+        <ul class="flex flex-col space-y-2 px-8 mt-2">
+          <li class="
+                     text-sm text-gray-600
+                     md:text-[0.85em]
+                     ">
+            <spam class="font-bold">Telefone:</spam>
+            (00) 1234-5678
+          </li>
+          <li class="
+                     text-sm text-gray-600
+                     md:text-[0.85em]
+                     ">
+            <spam class="font-bold">E-mail:</spam>Nossas Lojas
+          </li>
+          <li class="
+                     text-sm text-gray-600 font-bold
+                     md:text-[0.85em]
+                     ">Horários de atendimento:</li>
+          <li class="
+          text-[0.8em] text-gray-600
+          md:text-xs
+          ">Segunda a Sábado: 07h00 às 23h00</li>
+          <li class="
+                    text-[0.8em] text-gray-600
+                    md:text-xs
+                    ">Domingo e Feriados: 07h00 às 21h00</li>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- Ícones de cartão -->
+  <section class="
+   w-full bg-[#F5F5F5] py-5
+   flex items-center justify-center
+  ">
+    <div class="
+          w-[80%] 
+          flex flex-wrap flex-row justify-around items-center gap-7 
+          md:justify-center md:gap-[8%] ">
+
+      <img class="w-8 text-center" src="icons/Icones de pagamento/amex.svg">
+      <img class="w-8 text-center" src="icons/Icones de pagamento/mastercard.svg">
+      <img class="w-8 text-center" src="icons/Icones de pagamento/visa.svg">
+      <img class="w-8 text-center" src="icons/Icones de pagamento/hipercard.svg">
+      <img class="w-8 text-center" src="icons/Icones de pagamento/elo.svg">
+
+      <!-- Segunda linha com 4 ícones -->
+      <img class="w-8 text-center" src="icons/Icones de pagamento/c.svg">
+      <img class="w-8 text-center" src="icons/Icones de pagamento/paypal-seeklogo.com.svg">
+      <img class="w-8 text-center" src="icons/Icones de pagamento/Pix.svg">
+      <img class="w-8 text-center" src="icons/Icones de pagamento/icon-boleto___ffe2ba684569d29f8e546b10457c48f8.svg">
+    </div>
+  </section>
+
+  <footer class="
+   bg-white w-full h-full mt-10 mb-10
+   flex flex-col items-center justify-center
+   ">
+    <h3 class="text-[0.7em] text-gray-600 text-center px-2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+      sed
+      diam
+      nonummy nibh
+      euismod tincidunt ut laoreet dolore
+      magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</h3>
+    <div class="
+      w-[80%]
+      flex flex-row justify-around items-center mt-5
+      ">
+      <img class="w-12 text-center" src="icons/empresas/letsencrypt.svg">
+      <img class="w-14 text-center" src="icons/empresas/vtex-pci-200.svg">
+      <img class="w-16  text-center" src="icons/empresas/Avanti.svg">
+      <img class="w-12
+       text-center" src="icons/empresas/VTEX_Logo.svg">
+    </div>
+  </footer>
+
+  <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js" defer></script>
+</body>
+
+
+</html>
