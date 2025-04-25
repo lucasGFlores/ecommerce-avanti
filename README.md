@@ -4,7 +4,11 @@
 [![My Skills](https://skillicons.dev/icons?i=html,css,js)](https://skillicons.dev)
 
 ---
+## ✨ Funcionalidades
 
+- Uso de elementos responsivos (Desktop e mobile)
+
+---
 ## 🧰 Requisitos
 - Navegador moderno
 
