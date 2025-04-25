@@ -8,6 +8,14 @@
 
 - Uso de elementos responsivos (Desktop e mobile)
 
+---
+
+## 📸 Prévia
+
+![preview](./assets/screenshot.png)
+
+
+---
 ## 🧰 Requisitos
 - Navegador moderno
 
